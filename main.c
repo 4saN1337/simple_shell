@@ -12,9 +12,7 @@ int main(int ac, char **argv)
 	char **command = NULL;
 	int status = 0, indx = 0;
 	(void) ac;
-
-
-	while(1)
+	while (1)
 	{
 		line = getting_line();
 		if (line == NULL)
@@ -28,11 +26,6 @@ int main(int ac, char **argv)
 		command = tokenizer(line);
 		if (!command)
 			continue;
-
-		
-	
 		status = _executing(command, argv, indx);
-
 	}
-
 }

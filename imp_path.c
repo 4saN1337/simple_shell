@@ -8,18 +8,16 @@ char *_getpath(char *command)
 
 	for (i = 0; command[i]; i++)
 	{
-		if (command [i] == '/')
+		if (command[i] == '/')
 		{
 			if (stat(command, &stt) == 0)
 				return (_strdup(command));
-			
 			return (NULL);
 		}
 	}
 	path_envr = _getenv("PATH");
 	if (!path_envr)
 		return (NULL);
-
 	dir = strtok(path_envr, ":");
 	while (dir)
 	{
@@ -32,13 +30,12 @@ char *_getpath(char *command)
 			if (stat(full_prmpt, &stt) == 0)
 			{
 				free(path_envr);
-				return(full_prmpt);
+				return (full_prmpt);
 			}
 			free(full_prmpt), full_prmpt = NULL;
-
 			dir = strtok(NULL, ":");
 		}
 	}
 	free(path_envr);
-	return (NULL);	
+	return (NULL);
 }

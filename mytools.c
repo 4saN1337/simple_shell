@@ -4,27 +4,26 @@ void freearrayofdstring(char **arr)
 	int i;
 	if (!arr)
 		return;
-
 	for (i = 0; arr[i]; i++)
-		 free(arr[i]), arr[i] = NULL;
-   
-        free(arr), arr = NULL;
+		free(arr[i]), arr[i] = NULL;
+
+	free(arr), arr = NULL;
 }
 
 void printerror(char *name, char *cmd, int indx)
 {
-        char *index, ermssg[] = ": not found\n";
+	char *index, ermssg[] = ": not found\n";
 
-        index = _itoa(indx);
+	index = _itoa(indx);
 
-        write(STDERR_FILENO, name, _strlen(name));
-        write(STDERR_FILENO, ": ", 2);
-        write(STDERR_FILENO, index, _strlen(index));
-        write(STDERR_FILENO, ": ", 2);
-        write(STDERR_FILENO, cmd, _strlen(cmd));
-        write(STDERR_FILENO, ermssg, _strlen(ermssg));
+	write(STDERR_FILENO, name, _strlen(name));
+	write(STDERR_FILENO, ": ", 2);
+	write(STDERR_FILENO, index, _strlen(index));
+	write(STDERR_FILENO, ": ", 2);
+	write(STDERR_FILENO, cmd, _strlen(cmd));
+	write(STDERR_FILENO, ermssg, _strlen(ermssg));
 
-        free(index);
+	free(index);
 }
 
 char *_itoa(int n)
@@ -58,7 +57,7 @@ void reverse_string(char *str, int len)
 	{
 		tmp = str[start];
 		str[start] = str[end];
-	        str[end] = tmp;
+		str[end] = tmp;
 		start++;
 		end--;
 	}
