@@ -1,8 +1,11 @@
 #include "shell.h"
 
+/**
+ * _executing - the man function
+ *
+ */
 
-
-int _executing(char **command,char **argv, int indx)
+int _executing(char **command, char **argv, int indx)
 {
 	char *full_prmpt;
 	pid_t a_child;
@@ -13,7 +16,7 @@ int _executing(char **command,char **argv, int indx)
 	{
 		printerror(argv[0], command[0], indx);
 		freearrayofdstring(command);
-		return(127);
+		return (127);
 	}
 
 	a_child = fork();
@@ -31,7 +34,7 @@ int _executing(char **command,char **argv, int indx)
 			freearrayofdstring(command);
 			free(full_prmpt), full_prmpt = NULL;
 		}
-		return(WEXITSTATUS(status));
+		return (WEXITSTATUS(status));
 
 }
 

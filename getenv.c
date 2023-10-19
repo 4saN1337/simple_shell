@@ -1,6 +1,5 @@
 #include "shell.h"
 
-
 char *_getenv(char *avariable)
 {
 	char *tmp, *key, *value, *env;
