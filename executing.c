@@ -1,8 +1,13 @@
 #include "shell.h"
 
 /**
- * _executing - the man function
+ * _executing - Execute a command with arguments
  *
+ * @command:- Array of strings representing the command and its arguments.
+ * @argv:- Array of strings for environment variables.
+ * @indx:- Index for error reporting.
+ *
+ * Return: Exit status of the child process, or -1 on failure.
  */
 
 int _executing(char **command, char **argv, int indx)

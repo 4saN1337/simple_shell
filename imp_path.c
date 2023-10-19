@@ -1,5 +1,11 @@
 #include "shell.h"
 
+/**
+ * _getpath - Short description, single line
+ * @command: Description of parameter command
+ *
+ * Return: Description of the returned value
+ */
 char *_getpath(char *command)
 {
 	char *path_envr, *full_prmpt, *dir;

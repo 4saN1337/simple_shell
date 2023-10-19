@@ -1,11 +1,11 @@
 #include "shell.h"
-/*
+
+/**
  * main - main file of the simple shell
- * @av: The arguments
  * @ac: Arguments numbers
+ * @argv: The arguments
  * Return: 0 Always (success).
  */
-
 int main(int ac, char **argv)
 {
 	char *line = NULL;

@@ -1,7 +1,15 @@
 #include "shell.h"
+
+/**
+ * freearrayofdstring - Short description, single line
+ * @arr: Description of parameter arr
+ *
+ * Description: Longer description of the function
+ */
 void freearrayofdstring(char **arr)
 {
 	int i;
+
 	if (!arr)
 		return;
 	for (i = 0; arr[i]; i++)
@@ -10,6 +18,14 @@ void freearrayofdstring(char **arr)
 	free(arr), arr = NULL;
 }
 
+/**
+ * printerror - Short description, single line
+ * @name: Description of parameter name
+ * @cmd: Description of parameter cmd
+ * @indx: Description of parameter indx
+ *
+ * Description: Longer description of the function
+ */
 void printerror(char *name, char *cmd, int indx)
 {
 	char *index, ermssg[] = ": not found\n";
@@ -26,6 +42,14 @@ void printerror(char *name, char *cmd, int indx)
 	free(index);
 }
 
+/**
+ * _itoa - Short description, single line
+ * @n: Description of parameter n
+ *
+ * Description: Longer description of the function
+ *
+ * Return: Description of the returned value
+ */
 char *_itoa(int n)
 {
 	char buffer[20];
@@ -47,6 +71,15 @@ char *_itoa(int n)
 	return (_strdup(buffer));
 }
 
+/**
+ * reverse_string - Reverses a string
+ * @str: Pointer to the string to be reversed
+ * @len: Length of the string
+ *
+ * Description: This function reverses the string pointed to by `str` in place.
+ *
+ * Return: None
+ */
 void reverse_string(char *str, int len)
 {
 	char tmp;
