@@ -5,7 +5,7 @@
  *
  * @command:- Array of strings representing the command and its arguments.
  * @argv:- Array of strings for environment variables.
- * @ind:- Index for error reporting.
+ * @indx:- Index for error reporting.
  *
  * Return: Exit status of the child process, or -1 on failure.
  */
