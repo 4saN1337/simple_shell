@@ -1,6 +1,6 @@
 #include "shell.h"
 
-#define MAX_COMMAND_LENGTH 256
+
 
 void write_string(const char *str) {
     write(STDOUT_FILENO, str, strlen(str));
