@@ -4,7 +4,7 @@
  * main - main file of the simple shell
  * @ac: Arguments numbers
  * @argv: The arguments
- * Retur: 0 Always (success).
+ * Return: 0 Always (success).
  */
 int main(int ac, char **argv)
 {
