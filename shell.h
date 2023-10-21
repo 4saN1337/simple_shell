@@ -21,6 +21,9 @@ char *_getpath(char *command);
 void printerror(char *name, char *cmd, int indx);
 void reverse_string(char *str, int len);
 char *_itoa(int n);
+void write_string(const char *str);
+void execute_command(char *command);
+int main();
 
 char *_strdup(const char *str);
 int _strcmp(char *s1, char *s2);
