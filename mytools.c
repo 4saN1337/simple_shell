@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * freearrayofdstrin - Short description, single line
+ * freearrayofdstring - Short description, single line
  * @arr: Description of parameter arr
  *
  * Description: Longer description of the function
